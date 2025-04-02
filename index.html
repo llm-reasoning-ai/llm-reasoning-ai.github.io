@@ -195,13 +195,20 @@
   </div>
 </section>
 
-  <div class="columns is-centered">
-      <div class="column is-full-width">
-        <!-- <h2 class="title is-3">Growth Trend in LLM Reasoning</h2> -->
-
+<div class="columns is-centered">
+  <div class="column is-three-fifths">
+    <h2 class="title is-3 has-text-centered">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            As shown in <strong>Figure 1</strong>, this area has rapidly gained research attention,
+            often referred to as LLM reasoning or reasoning language model. Reasoning requires LLMs to go beyond directly producing an answer from a question; instead, they must
+            generate the thinking process (implicitly or explicitly) in the form of 'question → reasoning steps → answer'. Building on this, the ability of LLMs to reason effectively depends on two factors: <strong>how and at what stage reasoning is achieved</strong>, and <strong>what components are involved in the reasoning process</strong>. Accordingly, in this survey, we categorize existing research into two orthogonal dimensions (<strong>Figure 2</strong>): (1) Regime, refers to whether reasoning is achieved through inference-time strategies (aka. inference-time scaling) or through direct learning and adaptation (learning to reason); and (2) Architecture, refers to whether reasoning happens within a single, standalone LLM or within an interactive, agentic system. <strong>Figure 3</strong> outlines the structure of this survey.
+          </p>
+        </div>
         <figure class="has-text-centered" style="max-width: 800px; margin: 2.5rem auto;">
           <img src="./figure/trend_by_year.png" alt="Growth Trend Figure" style="width: 100%; height: auto;">
-          <figcaption><strong>Figure 1:</strong> Growth trend in LLM reasoning. We show the cumulative number (in thousands) of papers published from 2022 to February 2025, based on <a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a> keyword search. Research on regimes and architectures has accelerated notably since the introduction of Chain-of-Thought (CoT) in 2022.</figcaption>
+          <figcaption style="text-align: left;">
+          <strong>Figure 1:</strong> Growth trend in LLM reasoning. We show the cumulative number (in thousands) of papers published from 2022 to February 2025, based on <a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a> keyword search. Research on regimes and architectures has accelerated notably since the introduction of Chain-of-Thought (CoT) in 2022.</figcaption>
         </figure>
 
 
@@ -209,7 +216,8 @@
 
         <figure class="has-text-centered" style="max-width: 800px; margin: 4rem auto;">
           <img src="./figure/mindmap_survey.png" alt="Proposed Catagorization" style="width: 100%; height: auto;">
-          <figcaption><strong>Figure 2:</strong> The proposed categorization over regimes, architectures, and unified perspectives in this survey.</figcaption>
+          <figcaption style="text-align: left;">
+            <strong>Figure 2:</strong> The proposed categorization over regimes, architectures, and unified perspectives in this survey.</figcaption>
         </figure>
 
 
@@ -217,7 +225,8 @@
 
         <figure class="has-text-centered" style="max-width: 800px; margin: 4rem auto;">
           <img src="./figure/taxonomy.png" alt="Proposed Taxonomy" style="width: 100%; height: auto;">
-          <figcaption><strong>Figure 2:</strong> Taxonomy of LLM reasoning research organized in this survey by regimes (inference scaling,
+          <figcaption style="text-align: left;">
+            <strong>Figure 3:</strong> Taxonomy of LLM reasoning research organized in this survey by regimes (inference scaling,
             learning to reason) and architectures (standalone LLM, single-agent, multi-agent). Each leaf node includes
             examples from the literature that focus on the corresponding category.</figcaption>
         </figure>
