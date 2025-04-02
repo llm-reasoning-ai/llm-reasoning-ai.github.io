@@ -172,10 +172,8 @@
 
 
           <div class="is-size-5 publication-authors">
-            <!-- [<a href="./static/slides/neurips2024metageneration-tutorial-all.pdf">Slides</a>]  -->
-            <!-- [<a href="https://github.com/cmu-l3/neurips2024-inference-tutorial-code">Code</a>]  -->
             [<a href="survey_arxiv.pdf"> Survey Paper</a>] 
-            [<a href="https://llm-reasoning.github.io/" style="border-radius: 50%">Web Page</a>]
+            <!-- [<a href="https://llm-reasoning-ai.github.io/" style="border-radius: 50%">Web Page</a>] -->
           </div>
         </div>
       </div>
@@ -186,10 +184,10 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">About this survey</h2>
+        <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Reasoning is a fundamental cognitive process that enables logical inference, problem-solving, and decision-making. With the rapid advancement of large language models (LLMs), reasoning has emerged as a key capability that distinguishes advanced AI systems from conventional models that empower chatbots. In this survey, we categorize existing methods along two orthogonal dimensions: (1) Regimes, which define the stage at which reasoning is achieved (either at inference time or through dedicated training); and (2) Architectures, which determine the components involved in the reasoning process, distinguishing between standalone LLMs and agentic compound systems that incorporate external tools, and multiagent collaborations. Within each dimension, we analyze two key perspectives: (1) Input level, which focuses on techniques that construct high-quality prompts that the LLM condition on; and (2) Output level, which methods that refine multiple sampled candidates to enhance reasoning quality. This categorization provides a systematic understanding of the evolving landscape of LLM reasoning, highlighting emerging trends such as the shift from inference-scaling to learning-to-reason (e.g., DeepSeek-R1), and the transition to agentic workflows (e.g., OpenAI Deep Research, Manus Agent). Additionally, we cover a broad spectrum of learning algorithms, from supervised fine-tuning to reinforcement learning such as PPO and GRPO, and the training of reasoners and verifiers. We also examine key designs of agentic workflows, from established patterns like generator-evaluator and LLM debate to recent innovations. Finally, we identify emerging trends, such as domain-specific reasoning systems, and open challenges, such as evaluation and data quality. This survey aims to provide AI researchers and practitioners with a comprehensive foundation for advancing reasoning in LLMs, paving the way for more sophisticated and reliable AI systems
+            Reasoning is a fundamental cognitive process that enables logical inference, problem-solving, and decision-making. With the rapid advancement of large language models (LLMs), reasoning has emerged as a key capability that distinguishes advanced AI systems from conventional models that empower chatbots. In this survey, we categorize existing methods along two orthogonal dimensions: <strong>(1) Regimes</strong>, which define the stage at which reasoning is achieved (either at inference time or through dedicated training); and <strong>(2) Architectures</strong>, which determine the components involved in the reasoning process, distinguishing between standalone LLMs and agentic compound systems that incorporate external tools, and multiagent collaborations. Within each dimension, we analyze two key perspectives: <strong>(1) Input level</strong>, which focuses on techniques that construct high-quality prompts that the LLM condition on; and <strong>(2) Output level</strong>, which methods that refine multiple sampled candidates to enhance reasoning quality. This categorization provides a systematic understanding of the evolving landscape of LLM reasoning, highlighting emerging trends such as the shift from inference-scaling to learning-to-reason (e.g., DeepSeek-R1), and the transition to agentic workflows (e.g., OpenAI Deep Research, Manus Agent). Additionally, we cover a broad spectrum of learning algorithms, from supervised fine-tuning to reinforcement learning such as PPO and GRPO, and the training of reasoners and verifiers. We also examine key designs of agentic workflows, from established patterns like generator-evaluator and LLM debate to recent innovations. Finally, we identify emerging trends, such as domain-specific reasoning systems, and open challenges, such as evaluation and data quality. This survey aims to provide AI researchers and practitioners with a comprehensive foundation for advancing reasoning in LLMs, paving the way for more sophisticated and reliable AI systems
           </p>
         </div>
       </div>
@@ -197,268 +195,33 @@
   </div>
 </section>
 
-<!-- 
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
+  <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Schedule</h2>
-        <p>
-          Our tutorial will be held on Tuesday December 10, 1:30pm - 4:00pm (all the times are Vancouver local time).
-    
-        </p>
-        <p style="text-align: center">
-          <br/>
-          <b><a href="./static/slides/neurips2024metageneration-tutorial-all.pdf">[ALL SLIDES]</a></b>
-          <br/>
-        </p>
+        <!-- <h2 class="title is-3">Growth Trend in LLM Reasoning</h2> -->
 
-        <div class="content has-text-justified">
+        <figure class="has-text-centered" style="max-width: 800px; margin: 2.5rem auto;">
+          <img src="./figure/trend_by_year.png" alt="Growth Trend Figure" style="width: 100%; height: auto;">
+          <figcaption><strong>Figure 1:</strong> Growth trend in LLM reasoning. We show the cumulative number (in thousands) of papers published from 2022 to February 2025, based on <a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a> keyword search. Research on regimes and architectures has accelerated notably since the introduction of Chain-of-Thought (CoT) in 2022.</figcaption>
+        </figure>
 
-          <style type="text/css">
-          .tg  {border-collapse:collapse;border-spacing:0;}
-          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-            overflow:hidden;padding:10px 5px;word-break:normal;}
-          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-          .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-          .tg .tg-0lax{text-align:left;vertical-align:top}
-          </style>
-          <table class="tg">
-          <thead>
-            <tr>
-              <th class="tg-0pky">Time</th>
-              <th class="tg-0lax">Section</th>
-              <th class="tg-0lax">Presenter</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="tg-0lax">1:30pm - 1:40pm</td>
-              <td class="tg-0lax">Section 1: Introduction  <a href="./static/slides/neurips2024metageneration-tutorial-1-intro.pdf">[Slides]</a></td>
-              <td class="tg-0lax">Sean</td>
-            </tr>
-            <tr>
-              <td class="tg-0lax">1:40pm - 2:10pm</td>
-              <td class="tg-0lax">Section 2: Generation algorithms  <a href="./static/slides/neurips2024metageneration-tutorial-2-generation.pdf">[Slides]</a></td>
-              <td class="tg-0lax">Matthew</td>
-            </tr>
-            <tr>
-              <td class="tg-0lax">2:10pm - 2:50pm</td>
-              <td class="tg-0lax">Section 3: Meta-generation algorithms  <a href="./static/slides/neurips2024metageneration-tutorial-3-metageneration.pdf">[Slides]</a></td>
-              <td class="tg-0lax">Sean</td>
-            </tr>
-            <tr>
-              <td class="tg-0lax">2:50pm - 3:20pm</td>
-              <td class="tg-0lax">Section 4: Efficient generation  <a href="./static/slides/neurips2024metageneration-tutorial-4-efficiency.pdf">[Slides]</a></td>
-              <td class="tg-0lax">Hailey</td>
-            </tr>
-            <tr>
-              <td class="tg-0lax">3:20pm - 3:25pm</td>
-              <td class="tg-0lax">Section 5: Conclusion <a href="./static/slides/neurips2024metageneration-tutorial-5-conclusion.pdf">[Slides]</a></td>
-              <td class="tg-0lax">Sean</td>
-            </tr>
-            <tr>
-              <td class="tg-0lax">3:25pm - 3:55pm</td>
-              <td class="tg-0lax">Panel discussion</td>
-              <td class="tg-0lax">Ilia</td>
-            </tr>
-          </tbody>
-          </table>
-        </div>
-      </div>  
-    </div>
-    
-    <br/> -->
 
-  <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Reading List</h2> -->
+        <!-- <h2 class="title is-3">Proposed Catagorization</h2> -->
 
-        <!-- <p><b>Bold papers</b> are mentioned in our tutorial.</p> -->
-<!-- 
-        <br />
+        <figure class="has-text-centered" style="max-width: 800px; margin: 4rem auto;">
+          <img src="./figure/mindmap_survey.png" alt="Proposed Catagorization" style="width: 100%; height: auto;">
+          <figcaption><strong>Figure 2:</strong> The proposed categorization over regimes, architectures, and unified perspectives in this survey.</figcaption>
+        </figure>
 
-        <h3 class="title is-5">Primary Reference</h3>
-        <ul>
-          <li><a href="https://arxiv.org/abs/2406.16838"><b>From Decoding to Meta-Generation: Inference-time Algorithms for Large Language Models</b></a> (Welleck et al., 2024)</li>
-        </ul>
 
-        <br />
+        <!-- <h2 class="title is-3">Taxomony</h2> -->
 
-        <h3 class="title is-5">Section 1: Introduction</h3>
-        <ul>
-          <li><a href="https://arxiv.org/abs/2406.16838"><b>From Decoding to Meta-Generation: Inference-time Algorithms for Large Language Models, Section 1</b></a> (Welleck et al., 2024)</li>
-          <li><a href="https://arxiv.org/abs/2001.08361">Scaling Laws for Neural Language Models</a> (Kaplan et al., 2020)</li>
-          <li><a href="https://arxiv.org/abs/2210.11416">Scaling Instruction-Finetuned Language Models</a> (Chung et al., 2022)</li>
-          <li><a href="https://openai.com/index/learning-to-reason-with-llms/">Learning to Reason with LLMs</a> (OpenAI, 2024)</li>
-          <li><a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a> (Wei et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2203.07814">Competition-Level Code Generation with AlphaCode</a> (Li et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2407.21787">Large Language Monkeys: Scaling Inference Compute with Repeated Sampling</a> (Brown et al., 2024)</li>
-          <li><a href="https://nebius.com/blog/posts/training-and-search-for-software-engineering-agents">Leveraging training and search for better software engineering agents</a> (Nebius, 2024)</li>
-          <li><a href="https://arxiv.org/abs/2408.11791">Critique-out-Loud Reward Models</a> (Ankner et al., 2024)</li>
-          <li><a href="https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/">The Shift from Models to Compound AI Systems</a> (Zaharia et al., 2024)</li>
-        </ul>
+        <figure class="has-text-centered" style="max-width: 800px; margin: 4rem auto;">
+          <img src="./figure/taxonomy.png" alt="Proposed Taxonomy" style="width: 100%; height: auto;">
+          <figcaption><strong>Figure 2:</strong> Taxonomy of LLM reasoning research organized in this survey by regimes (inference scaling,
+            learning to reason) and architectures (standalone LLM, single-agent, multi-agent). Each leaf node includes
+            examples from the literature that focus on the corresponding category.</figcaption>
+        </figure>
 
-        <br />
-
-        <h3 class="title is-5">Section 2: Generation Algorithms</h3>
-        <ul>
-          <li><a href="https://arxiv.org/abs/2406.16838"><b>From Decoding to Meta-Generation: Inference-time Algorithms for Large Language Models, Section 2, 3</b></a> (Welleck et al., 2024)</li>
-          <li><a href="https://arxiv.org/abs/1702.01806">Beam Search Strategies for Neural Machine Translation</a> (Freitag and Al-Onaizan, 2017)</li>
-          <li><a href="https://arxiv.org/abs/2402.06925">A Thorough Examination of Decoding Methods in the Era of LLMs</a> (Shi et al., 2024)</li>
-          <li><a href="https://arxiv.org/abs/1908.10090">On NMT Search Errors and Model Errors: Cat Got Your Tongue?</a> (Stahlberg and Byrne, 2019)</li>
-          <li><a href="https://arxiv.org/abs/2202.00666">Locally Typical Sampling</a> (Meister et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2010.02650">If Beam Search is the Answer, What Was the Question?</a> (Meister et al., 2020)</li>
-          <li><a href="https://arxiv.org/abs/2210.15191">Truncation Sampling as Language Model Desmoothing</a> (Hewitt et al., 2022)</li>
-          <li><a href="https://openreview.net/forum?id=rygGQyrFvH">The Curious Case of Neural Text Degeneration</a> (Holtzman et al., 2020)</li>
-          <li><a href="https://arxiv.org/abs/2310.01693">Closing the Curious Case of Neural Text Degeneration</a> (Finlayson et al., 2024)</li>
-          <li><a href="https://arxiv.org/abs/1804.10959">Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates</a> (Kudo et al., 2018)</li>
-          <li><a href="https://arxiv.org/abs/1908.04319">Neural Text Generation with Unlikelihood Training</a> (Welleck et al., 2019)</li>
-          <li><a href="https://aclanthology.org/2021.acl-long.522/">DExperts: Decoding-Time Controlled Text Generation with Experts and Anti-Experts</a> (Liu et al., 2021)</li>
-          <li><a href="https://arxiv.org/abs/2210.15097">Contrastive Decoding: Open-ended Text Generation as Optimization</a> (Li et al., 2022)</li>
-        </ul>
-
-        <br />
-
-        <br />
-
-    <h3 class="title is-5">Section 3: Meta-Generation Algorithms</h3>
-    <ul>
-      <li><b><a href="https://arxiv.org/abs/2406.16838">From Decoding to Meta-Generation: Inference-time Algorithms for Large Language Models, Sections 4, 5, 6</b></a> (Welleck et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2407.21787">Large Language Monkeys: Scaling Inference Compute with Repeated Sampling</a> (Brown et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2408.00724">Inference Scaling Laws: An Empirical Analysis of Compute-Optimal Inference for Problem-Solving with Language Models</a> (Wu et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2408.03314">Scaling LLM Test-Time Compute Optimally Can Be More Effective Than Scaling Model Parameters</a> (Snell et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2203.07814">Competition-Level Code Generation with AlphaCode</a> (Li et al., 2022)</li>
-      <li><a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a> (Wei et al., 2022)</li>
-      <li><a href="https://arxiv.org/abs/2310.07923">The Expressive Power of Transformers with Chain of Thought</a> (Merrill et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2305.15408">Towards Revealing the Mystery behind Chain of Thought: A Theoretical Perspective</a> (Feng et al., 2022)</li>
-      <li><a href="https://arxiv.org/abs/2406.14197">On the Representational Capacity of Neural Language Models with Chain-of-Thought Reasoning</a> (Nowak et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2210.03350">Measuring and Narrowing the Compositionality Gap in Language Models</a> (Press et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2212.14024">Demonstrate-Search-Predict: Composing Retrieval and Language Models for Knowledge-Intensive NLP</a> (Khattab et al., 2022)</li>
-      <li><a href="https://arxiv.org/abs/2305.05364">Large Language Model Programs</a> (Schlag et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2207.10342">Language Model Cascades</a> (Dohan et al., 2022)</li>
-      <li><a href="https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/">The Shift from Models to Compound AI Systems</a> (Zaharia et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2311.11829">System 2 Attention (is something you might need too)</a> (Weston and Sukhbaatar, 2023)</li>
-      <li><a href="https://arxiv.org/abs/2210.12283">Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs</a> (Jiang et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2110.14168">Training Verifiers to Solve Math Word Problems</a> (Cobbe et al., 2021)</li>
-      <li><a href="https://arxiv.org/abs/2009.01325">Learning to Summarize with Human Feedback</a> (Stiennon et al., 2020)</li>
-      <li><a href="https://arxiv.org/abs/2112.09332">WebGPT: Browser-Assisted Question-Answering with Human Feedback</a> (Nakano et al., 2022)</li>
-      <li><a href="https://arxiv.org/abs/2203.11171">Self-Consistency Improves Chain of Thought Reasoning in Language Models</a> (Wang et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2310.01387">It’s MBR All the Way Down: Modern Generation Techniques Through the Lens of Minimum Bayes Risk</a> (Bertsch et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2206.02336">Making Large Language Models Better Reasoners with Step-Aware Verifier</a> (Li et al., 2022)</li>
-      <li><a href="https://arxiv.org/abs/2211.14275">Solving math word problems with process- and outcome-based feedback</a> (Li et al., 2022)</li>
-      <li><a href="https://arxiv.org/abs/2305.20050">Let's Verify Step by Step</a> (Lightman et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2403.09472">Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision</a> (Sun et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2408.15240">Generative Verifiers: Reward Modeling as Next-Token Prediction</a> (Zhang et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2312.08935">Math-Shepherd: Verify and Reinforce LLMs Step-by-Step without Human Annotations</a> (Wang et al., 2024)</li>
-      <li><a href="https://www.nature.com/articles/nature16961">Mastering the Game of Go with Deep Neural Networks and Tree Search</a> (Silver et al., 2016)</li>
-      <li><a href="https://www.nature.com/articles/nature24270">Mastering the Game of Go Without Human Knowledge</a> (Silver et al., 2017)</li>
-      <li><a href="https://arxiv.org/abs/2009.03393">Generative Language Modeling for Automated Theorem Proving</a> (Polu et al., 2020)</li>
-      <li><a href="https://arxiv.org/abs/2202.01344">Formal Mathematics Statement Curriculum Learning</a> (Polu et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2205.11491">HyperTree Proof Search for Neural Theorem Proving</a> (Lample et al., 2022)</li>
-      <li><a href="https://arxiv.org/abs/2407.01476">Tree Search for Language Model Agents</a> (Koh et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2412.06176">AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement</a> (Aggarwal et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2303.17651">Self-Refine: Iterative Refinement with Self-Feedback</a> (Madaan et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2304.05128">Teaching Large Language Models to Self-Debug</a> (Chen et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2405.18634">A Theoretical Understanding of Self-Correction through In-context Alignment</a> (Wang et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2411.14199">OpenScholar: Synthesizing Scientific Literature with Retrieval-augmented LMs</a> (Asai et al., 2024)</li>
-      <li><a href="https://arxiv.org/abs/2310.01798">Large Language Models Cannot Self-Correct Reasoning Yet</a> (Huang et al., 2024)</li>
-      <li><a href="https://openreview.net/pdf?id=hH36JeQZDaO">Generating Sequences by Learning to Self-Correct</a> (Welleck et al., 2023)</li>
-      <li><a href="https://arxiv.org/abs/2409.12917">Training Language Models to Self-Correct via Reinforcement Learning</a> (Kumar et al., 2024)</li>
-    </ul>
-
-        <br />
-
-        <h3 class="title is-5">Section 4: Efficient Generation</h3>
-        <ul>
-          <li><a href="https://arxiv.org/abs/2406.16838"><b>From Decoding to Meta-Generation: Inference-time Algorithms for Large Language Models, Section 7</b></a> (Welleck et al., 2024)</li>
-          <li><a href="https://horace.io/brrr_intro.html">Making Deep Learning Go Brrrr from First Principles</a> (He, 2022)</li>
-          <li><a href="https://www.artfintel.com/p/how-does-batching-work-on-modern">How Does Batching Work on Modern GPUs?</a> (Timbers, 2024)</li>
-          <li><a href="https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization">A Visual Guide to Quantization</a> (Grootendorst, 2024)</li>
-          <li><a href="https://arxiv.org/abs/2208.07339">LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale</a> (Dettmers et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2205.14135">FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness</a> (Dao et al., 2022)</li>
-          <li><a href="https://www.usenix.org/system/files/osdi22-yu.pdf">Orca: A Distributed Serving System for Transformer-Based Generative Models</a> (Yu et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2211.17192">Fast Inference from Transformers via Speculative Decoding</a> (Leviathan et al., 2022)</li>
-          <li><a href="https://arxiv.org/abs/2302.01318">Accelerating Large Language Model Decoding with Speculative Sampling</a> (Chen et al., 2023</li>
-          <li><a href="https://www.answer.ai/posts/2024-08-01-cold-compress.html">Cold-Compress 1.0: A Hackable Toolkit for KV-Cache Compression</a> (Adams et al., 2024)</li>
-          <li><a href="https://arxiv.org/abs/2305.13245">GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints</a> (Ainslie et al., 2023)</li>
-          <li><a href="https://arxiv.org/abs/1911.02150">Fast Transformer Decoding: One Write-Head is All You Need</a> (Shazeer, 2019)</li>
-          <li><a href="https://arxiv.org/abs/2306.14048">H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models</a> (Zhang et al., 2023)</li>
-          <li><a href="https://arxiv.org/abs/2402.05099">Hydragen: High-Throughput LLM Inference with Shared Prefixes</a> (Juravsky et al., 2024)</li>
-          <li><a href="https://arxiv.org/abs/2309.06180">Efficient Memory Management for Large Language Model Serving with PagedAttention</a> (Kwon et al., 2023)</li>
-          <li><a href="hhttps://arxiv.org/abs/2312.07104">SGLang: Efficient Execution of Structured Language Model Programs</a> (Zheng et al., 2024)</li>
-        </ul>
-
-        <br />
-
-        <h3 class="title is-5">Section 5: Conclusion</h3>
-        <ul>
-          <li><a href="https://arxiv.org/abs/2406.16838"><b>From Decoding to Meta-Generation: Inference-time Algorithms for Large Language Models, Section 8</b></a> (Welleck et al., 2024)</li>
-          <li><a href="https://arxiv.org/abs/2412.06176">AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement</a> (Aggarwal et al., 2024)</li>
-          <li><a href="https://arxiv.org/abs/2404.03683">Stream of Search (SoS): Learning to Search in Language</a> (Gandhi et al., 2024)</li>
-          <li><a href="https://qwenlm.github.io/blog/qwq-32b-preview/">QwQ: Reflect Deeply on the Boundaries of the Unknown</a> (Qwen, 2024)</li>
-          <li><a href="https://x.com/deepseek_ai/status/1859200141355536422">DeepSeek R1 Lite</a> (Qwen, 2024)</li>
-          <li><a href="https://arxiv.org/abs/2407.01476">Tree Search for Language Model Agents</a> (Koh et al., 2024)</li>
-          <li><a href="https://x.com/gneubig/status/1866172948991615177">Agent Refinement example</a> (@gneubig, 2024)</li>
-          <li><a href="https://nebius.com/blog/posts/training-and-search-for-software-engineering-agents">Leveraging training and search for better software engineering agents</a> (Nebius, 2024)</li>
-          <li><a href="https://arxiv.org/abs/2404.03683">Archon: An Architecture Search Framework for Inference-Time Techniques</a> (Saad-Falcon et al., 2024)</li>
-        </ul> -->
-
-        <!-- <br /> -->
-<!-- 
-      </div>
-    </div>
-      <div class="column is-full-width">
-        <h2 class="title is-3">Panel discussion</h2>
-        <p>Join us for an insightful panel discussion featuring a selected group of experts in research related to Large Language Models (LLMs) and meta-generation algorithms. Our panelists are listed below!</p>
-      </div>
-      <div class="is-size-5 publication-authors">
-        <table style="width: 100%;">
-            <tr>
-                <td class="author-block">
-                    <img src="static/imgs/profile_beidi.jpg" alt="Beidi Chen">
-                    <span class="author-info">
-                        <a href="https://www.andrew.cmu.edu/user/beidic/" class="author-name">Beidi Chen<sup>1</sup></a>
-                    </span>
-                </td>
-                <td class="author-block">
-                    <img src="static/imgs/profile_nouha.jpg" alt="Nouha Dziri">
-                    <span class="author-info">
-                        <a href="https://nouhadziri.github.io/" class="author-name">Nouha Dziri<sup>2</sup></a>
-                    </span>
-                </td>
-                <td class="author-block">
-                    <img src="static/imgs/profile_rishabh.jpg" alt="Rishabh Agarwal">
-                    <span class="author-info">
-                        <a href="https://agarwl.github.io" class="author-name">Rishabh Agarwal<sup>3</sup></a>
-                    </span>
-                </td>
-                <td class="author-block">
-                    <img src="static/imgs/profile_jakob.jpg" alt="Jakob Foerster">
-                    <span class="author-info">
-                        <a href="https://www.jakobfoerster.com/" class="author-name">Jakob Foerster<sup>4</sup></a>
-                    </span>
-                </td>
-                <td class="author-block">
-                    <img src="static/imgs/profile_noam.jpg" alt="Noam Brown">
-                    <span class="author-info">
-                        <a href="https://noambrown.github.io/" class="author-name">Noam Brown<sup>5</sup></a>
-                    </span>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="is-size-6 publication-authors">
-        <span class="author-block"><sup>1</sup>Carnegie Mellon University</span>
-        <span class="author-block"><sup>2</sup>AI2</span>
-        <span class="author-block"><sup>3</sup>DeepMind, McGill</span>
-        <span class="author-block"><sup>4</sup>Meta AI</span>
-        <span class="author-block"><sup>5</sup>OpenAI</span>
-    </div>
-    </div>
-</section> -->
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -471,9 +234,6 @@
 }</code></pre>
   </div>
 </section>
-  <!-- note={Survey Certification} -->
-  <!-- issn={2835-8856}, -->
-  <!-- url={file:///Users/zixuan.ke/Documents/GitHub/llm-reasoning.github.io/survey_arxiv.pdf}, -->
 
 <footer class="footer">
   <div class="container">
